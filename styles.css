@@ -267,6 +267,32 @@ img {
     animation: fadeIn 0.8s ease 0.8s forwards;
 }
 
+.hero-profile {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.3s forwards;
+}
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-full);
+    border: 4px solid var(--color-bg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+}
+
 .hero-decoration {
     position: absolute;
     right: -10%;
@@ -1113,6 +1139,23 @@ img {
         padding: var(--spacing-xl) var(--spacing-md);
     }
     
+    .hero-profile {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
     .hero-decoration {
         display: none;
     }
@@ -1160,6 +1203,11 @@ img {
     
     .nav-logo {
         font-size: 0.75rem;
+    }
+    
+    .profile-image {
+        width: 160px;
+        height: 160px;
     }
     
     .hero-title {
