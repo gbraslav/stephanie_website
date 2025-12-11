@@ -925,6 +925,88 @@ img {
 }
 
 /* ===================================
+   Background Images - Sales & Metrics
+   =================================== */
+.experience {
+    position: relative;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: url('images/dashboard-analytics.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.experience .container {
+    position: relative;
+    z-index: 1;
+}
+
+.skills {
+    position: relative;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    background-image: url('images/metrics-dashboard.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.skills .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero section subtle background accent */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 60%;
+    background-image: url('images/dashboard-analytics.jpg');
+    background-size: cover;
+    background-position: center left;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments for background images */
+@media (max-width: 768px) {
+    .experience::before,
+    .skills::before,
+    .hero::after {
+        width: 100%;
+        opacity: 0.04;
+    }
+}
+
+/* ===================================
    Animations
    =================================== */
 @keyframes fadeIn {
